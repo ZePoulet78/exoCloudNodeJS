@@ -8,9 +8,13 @@ services:
     plan: free
     buildCommand: npm install
     startCommand: npm run start
+    envVars:
+      - key: DB_URL
+        fromDataBase:
+          name: exoCloudNodeJS
+          property: connectionString
 
 databases:
   - name: exoCloudNodeJS
     region: frankfurt
-    databaseName: mydb
     plan: free
