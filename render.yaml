@@ -1,13 +1,14 @@
 services:
   - type: web
-    env: "node"
+    env: node
     name: "esgi.render.nodejs"
     repo: https://github.com/ZePoulet78/exoCloudNodeJS
     branch: main
     plan: free
+    build: npm run build
 
 databases:
-  - name: "exoCloudNodeJS"
-    databaseName: "exoNodeJS"
+  - name: exoCloudNodeJS
+    databaseName: mydb
     user: donn
     plan: free
