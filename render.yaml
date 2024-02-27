@@ -3,7 +3,7 @@ services:
     name: esgi-donnesh
     runtime: node
     region: frankfurt
-    branch: main
+    branch: master
     plan: free
     buildCommand: npm install
     startCommand: npm run start
