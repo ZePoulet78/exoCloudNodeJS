@@ -5,7 +5,7 @@ services:
     region: frankfurt
     branch: master
     plan: free
-    buildCommand: npm install
+    buildCommand: yarn
     startCommand: npm start
     envVars:
       - key: DB_URL
