@@ -25,7 +25,7 @@ services:
     region: frankfurt
     plan: free
     repo: https://github.com/ZePoulet78/exoCloudNodeJS
-    branch: main
+    branch: master
     buildCommand: npm install
     startCommand: npm run start
     envVars:
