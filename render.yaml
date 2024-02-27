@@ -1,7 +1,8 @@
 services:
   - type: web
-    env: node
-    name: "esgi.render.nodejs"
+    name: esgi-donnesh
+    runtime: node
+    region: frankfurt
     repo: https://github.com/ZePoulet78/exoCloudNodeJS
     branch: main
     plan: free
