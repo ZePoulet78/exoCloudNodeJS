@@ -1,19 +1,40 @@
+# services:
+#   - type: web
+#     name: esgi-donnesh
+#     runtime: node
+#     region: frankfurt
+#     branch: master
+#     plan: free
+#     buildCommand: yarn
+#     startCommand: npm start
+#     envVars:
+#       - key: DB_URL
+#         fromDataBase:
+#           name: exoCloudNodeJS
+#           property: connectionString
+
+# databases:
+#   - name: exoCloudNodeJS
+#     plan: free
+#     region: frankfurt
+
 services:
   - type: web
-    name: esgi-donnesh
     runtime: node
+    name: esgi.render.nodejs
     region: frankfurt
-    branch: master
     plan: free
-    buildCommand: yarn
-    startCommand: npm start
+    repo: https://github.com/Gautierrr/exerciceCloud
+    branch: main
+    buildCommand: npm install
+    startCommand: npm run start
     envVars:
-      - key: DB_URL
-        fromDataBase:
-          name: exoCloudNodeJS
+      - key:  DB_URL
+        fromDatabase:
+          name: exercicecloud
           property: connectionString
 
 databases:
-  - name: exoCloudNodeJS
+  - name: exercicecloud
     plan: free
     region: frankfurt
