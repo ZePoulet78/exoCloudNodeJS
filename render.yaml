@@ -6,10 +6,11 @@ services:
     repo: https://github.com/ZePoulet78/exoCloudNodeJS
     branch: main
     plan: free
-    buildCommand: npm run build
+    buildCommand: npm install
+    startCommand: npm run start
 
 databases:
   - name: exoCloudNodeJS
+    region: frankfurt
     databaseName: mydb
-    user: donn
     plan: free
