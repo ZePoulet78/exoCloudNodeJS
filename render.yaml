@@ -24,7 +24,7 @@ services:
     name: esgi.render.nodejs
     region: frankfurt
     plan: free
-    repo: https://github.com/Gautierrr/exerciceCloud
+    repo: https://github.com/ZePoulet78/exoCloudNodeJS
     branch: main
     buildCommand: npm install
     startCommand: npm run start
